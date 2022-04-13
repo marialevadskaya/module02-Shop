@@ -14,6 +14,7 @@ body {
     font-size: 1.6rem;
     font-family: $font-jost;
     color: $green;
+    overflow-x: hidden;
 }
 
 .header {
@@ -192,50 +193,50 @@ body {
     &__tomato {
         position: absolute;
         width: 11rem;
-        bottom: 106px;
-        right: 176px;
+        bottom: 109px;
+        right: 113px;
         z-index: -1;
     }
     &__avocado {
         position: absolute;
         width: 17.8rem;
-        top: 48px;
-        right: 49px;
+        top: 47px;
+        right: -8px;
         z-index: -1;
     }
     &__cucumber {
         position: absolute;
         width: 8.7rem;
         top: 0;
-        right: 825px;
+        right: 1135px;
         z-index: -1;
     }
     &__pepper {
         position: absolute;
         width: 8.6rem;
         top: 400px;
-        left: 92px;
+        left: 29px;
         z-index: -1;
     }
     &__bean-1 {
         position: absolute;
         width: 6.6rem;
-        top: 865px;
-        left: 94px;
+        top: 864px;
+        left: 31px;
         z-index: -1;
     }
     &__bean-2 {
         position: absolute;
         width: 4.7rem;
-        top: 800px;
-        left: 70px;
+        top: 798px;
+        left: 9px;
         z-index: -1;
     }
     &__bean-3 {
         position: absolute;
         width: 3.6rem;
-        top: 810px;
-        left: 54px;
+        top: 811px;
+        left: -9px;
         z-index: -1;
     }
 }
@@ -274,40 +275,6 @@ body {
     background-color: $orange;
     box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
     display: inline-block;     
-}
-.offer {
-    background-image: url(../images/offer.png);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
-    padding-top: 2.8rem;
-    padding-bottom: 200px;
-    &__text {
-        margin-top: 5.8rem;
-        max-width: 690px;
-    }
-    &__slider {
-        overflow: hidden;
-        padding-top: 100px;
-    }
-}
-.swiper {
-    overflow: initial;
-    &-pagination {
-        display: none;
-    }
-    &-button-next, &-button-prev {
-        top: -60px;
-        &::after {
-            color: $green;
-            width: 10px;
-            height: 18px;
-        }
-    }
-    &-button-prev {
-        left: initial;
-        right: 100px;
-    }
 }
 
   
