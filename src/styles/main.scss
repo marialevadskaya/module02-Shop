@@ -28,7 +28,7 @@ body {
         list-style-type: none;
         margin: 0;
         padding-left: 0;
-        gap: 4.7rem;
+        gap: 7rem;
     }
     &__link {
         color: $green;
@@ -53,8 +53,8 @@ body {
         background-position: center center;
         background-color: $orange;
         border-radius: 100%;
-        width: 3.8rem;
-        height: 3.8rem;
+        width: 4rem;
+        height: 4rem;
         border: 1px solid $orange;
         position: relative;
         &:hover {
@@ -74,8 +74,8 @@ body {
     display: block;
     background-image: url(..//images/logo.svg);
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 12.3rem;
+    background-size: contain;
+    width: 12rem;
     height: 3.2rem;
 }
 .container {
@@ -85,17 +85,20 @@ body {
     padding-right: 15px;
 }
 .main {
+    position: relative;
     background-image: url(../images/main.png);
     background-size: cover;
     background-position-x: center;
+    background-repeat: no-repeat;
     padding-bottom: 18rem;
+    z-index: 0;
     &__item {
         margin-left: 12rem;
         max-width: 37.8rem;
-        margin-top: 6.5rem;
+        margin-top: 6.2rem;
     }
     &__link {
-        margin-top: 7rem;
+        margin-top: 5.3rem;
     }
     &__flex {
         display: flex;
@@ -104,8 +107,8 @@ body {
         align-items: center;
     }
     &__cover {
-        flex-basis: 759px;
-        height: 759px;
+        flex-basis: 758px;
+        height: 758px;
         border: 1px solid rgba($green, .4);
         border-radius: 100%;
         display: flex;
@@ -115,8 +118,8 @@ body {
         position: relative;
     }
     &__line {
-        width: 658px;
-        height: 658px;
+        width: 656px;
+        height: 656px;
         border: 1px solid rgba($green, .4);
         border-radius: 100%;
         display: flex;
@@ -126,6 +129,11 @@ body {
     }
     &__image {
         width: 92%;
+        box-shadow: 3rem 3rem 6rem 0.5rem rgba($green, 0.15);
+        border-radius: 100%;
+    }
+    &__text {
+        padding-top: 4rem;
     }
     &__btn {
         border: none;
@@ -161,25 +169,74 @@ body {
             }
         }
         &_2 {
-            top: 193px;
-            right: 1px;
+            top: 194px;
+            right: 2px;
             &::before {
-                right: 88px;
-                bottom: 15px;
+                top: 17px;
+                left: -26px;
             }
         }
         &_3 {
             bottom: -50px;
-            right: 242px;
+            right: 244px;
             &::before {
-                bottom: 58px;
-                right: 30px;
+                top: -24px;
+                left: 13px;
             }
         }
     }
     &__food {
         display: block;
         color: rgba($green, .8);
+    }
+    &__tomato {
+        position: absolute;
+        width: 11rem;
+        bottom: 106px;
+        right: 176px;
+        z-index: -1;
+    }
+    &__avocado {
+        position: absolute;
+        width: 17.8rem;
+        top: 48px;
+        right: 49px;
+        z-index: -1;
+    }
+    &__cucumber {
+        position: absolute;
+        width: 8.7rem;
+        top: 0;
+        right: 825px;
+        z-index: -1;
+    }
+    &__pepper {
+        position: absolute;
+        width: 8.6rem;
+        top: 400px;
+        left: 92px;
+        z-index: -1;
+    }
+    &__bean-1 {
+        position: absolute;
+        width: 6.6rem;
+        top: 865px;
+        left: 94px;
+        z-index: -1;
+    }
+    &__bean-2 {
+        position: absolute;
+        width: 4.7rem;
+        top: 800px;
+        left: 70px;
+        z-index: -1;
+    }
+    &__bean-3 {
+        position: absolute;
+        width: 3.6rem;
+        top: 810px;
+        left: 54px;
+        z-index: -1;
     }
 }
 .title {
@@ -188,7 +245,6 @@ body {
     font-size: 8rem;
     line-height: 1;
     margin: 0;
-    padding-top: 4.1rem;
     &__span {
         font-style: italic;
     }
@@ -200,20 +256,58 @@ body {
 }
 .description {
     margin: 0;
+    line-height: 1.5;
     &_size-s {
         font-size: 1.8rem;
+    }
+    &_size-m {
+        font-size: 2.4rem;
     }
 }
 .link {
     color: $white;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 2.4rem 4.4rem;
-    letter-spacing: 1px;
+    padding: 2.4rem 4.3rem;
+    letter-spacing: 0.13rem;
     border-radius: 3.8rem;
     background-color: $orange;
     box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
     display: inline-block;     
+}
+.offer {
+    background-image: url(../images/offer.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    padding-top: 2.8rem;
+    padding-bottom: 200px;
+    &__text {
+        margin-top: 5.8rem;
+        max-width: 690px;
+    }
+    &__slider {
+        overflow: hidden;
+        padding-top: 100px;
+    }
+}
+.swiper {
+    overflow: initial;
+    &-pagination {
+        display: none;
+    }
+    &-button-next, &-button-prev {
+        top: -60px;
+        &::after {
+            color: $green;
+            width: 10px;
+            height: 18px;
+        }
+    }
+    &-button-prev {
+        left: initial;
+        right: 100px;
+    }
 }
 
   
