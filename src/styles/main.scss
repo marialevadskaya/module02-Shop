@@ -275,6 +275,11 @@ body {
     background-color: $orange;
     box-shadow: 0px 1rem 1.1rem .2rem rgba(207, 92, 13, 0.2);
     display: inline-block;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        background-color: #bf601f;
+    }
     &_max {
         font-size: 1.6rem;
         padding: 2.1rem 4.9rem;
@@ -689,6 +694,274 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+}
+.delivery {
+    background-image: url(../images/delivery.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    padding-bottom: 20.4rem;
+    &__box {
+        display: flex;
+        gap: 12%;
+        margin-top: 6.7rem;
+        margin-left: 12rem;
+
+    }
+    &__left {
+        max-width: 567px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3.5rem;
+        flex-basis: 44%;
+    }
+    &__link {
+        color: $green;
+        text-decoration: none;
+        position: relative;
+        &::after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: #858881;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 3px;
+        }
+    }
+    &__right {
+        max-width: 470px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3.5rem;
+        flex-basis: 37%;
+    }
+    &__span {
+        color: $orange;
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        list-style-type: none;
+        padding-left: 0;
+    }
+    &__item {
+        cursor: pointer;
+        opacity: .4;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__item:nth-child(1) {
+        background-image: url(../images/mastercard.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 53px;
+        height: 32px;
+    }
+    &__item:nth-child(2) {
+        background-image: url(../images/visa.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 74px;
+        height: 23px;
+    }
+    &__item:nth-child(3) {
+        background-image: url(../images/paypal.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 87px;
+        height: 24px;
+    }
+}
+.contact-box {
+    padding-bottom: 24.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__text {
+        margin-top: 5.4rem;
+        padding-left: 11.4rem;
+        max-width: 38rem;
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-left: 0;
+        list-style-type: none;
+    }
+    &__link {
+        color: $green;
+        text-decoration: none;
+        font-size: 2.4rem;
+        font-weight: 500;
+    }
+    &__list-item {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        &::before {
+            content: '';
+            width: 29px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        &:nth-child(1) {
+            &::before {
+                background-image: url(../images/phone.svg);
+                background-size: 29px 25px;
+            }
+        }
+        &:nth-child(2) {
+            &::before {
+                background-image: url(../images/mail.svg);
+                background-size: 29px 21px;
+            }
+        }
+    }
+    &__form {
+        flex-basis: 589px;
+    }
+}
+.card {
+    border: 2px solid rgba($green, .4);
+    border-radius: 2rem;
+    padding: 3.2rem 5.8rem 4rem;
+    &__title {
+        font-size: 3rem;
+        font-family: $font-cormorant;
+        font-weight: 700;
+        margin-top: 0;
+    }
+    &__label {
+        display: block;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        margin-left: .6rem;
+    }
+    &__input {
+        display: block;
+        border: 1px solid rgba($green, .4);
+        border-radius: 2rem;
+        padding: 2.2rem 3rem;
+        margin-bottom: 2.8rem;
+        width: 100%;
+        box-sizing: border-box;
+        &:focus {
+            border: 1px solid rgba($green, 1);
+            outline: none;
+        }
+        &:invalid {
+            border: 1px solid red;
+        }
+    }
+    &__check {
+        font-size: 1.2rem;
+        color: rgba($green, .6);
+        line-height: 1.5;
+        max-width: 360px;
+        margin-top: 1.6rem;
+        margin-bottom: 0;
+    }
+    &__link {
+        margin-top: 1.2rem;
+    }
+    &__docs {
+        color: rgba($green, .6);
+        text-decoration: none;
+        border-bottom: 1px solid #cecfcc;
+    }
+}
+.footer {
+    background-image: url(../images/footer.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__list {
+        font-size: 1.8rem;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+    &__link {
+        color: $green;
+        text-decoration: none;
+        &:hover {
+            color: $orange;
+        }
+    }
+    &__tel {
+        display: block;
+        text-decoration: none;
+        color: $green;
+        font-size: 2.7rem;
+        margin-bottom: 3rem;
+    }
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 6rem;
+        color: rgba($green, .6);
+    }
+    &__author {
+        color: rgba($green, .6);
+        text-decoration: none;
+        &:hover {
+            color: rgba($green, 1);
+        }
+    }
+}
+.footer-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.8rem;
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    &__link {
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border: 1px solid $green;
+        border-radius: 100%;
+        opacity: .8;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__vk {
+        background-image: url(../images/vk.svg);
+        background-size: 2.3rem;
+    }
+    &__inst {
+        background-image: url(../images/instagram.svg);
+        background-size: 1.8rem;
+    }
+    &__fb {
+        background-image: url(../images/facebook.svg);
+        background-size: 1.8rem;
     }
 }
 
