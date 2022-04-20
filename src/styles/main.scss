@@ -78,6 +78,10 @@ body {
     background-size: contain;
     width: 12rem;
     height: 3.2rem;
+    &_footer {
+        width: 17.9rem;
+        height: 4.9rem;
+    }
 }
 .container {
     max-width: 1440px;
@@ -439,7 +443,7 @@ body {
             position: relative;
             overflow: hidden;
             width: 100%;
-            height: 324px;
+            height: 312px;
             text-align: center;
         }
         &__image {
@@ -575,7 +579,7 @@ body {
     background-size: cover;
     background-position-x: center;
     background-repeat: no-repeat;
-    padding-bottom: 20rem;
+    padding-bottom: 14rem;
     &__text {
         padding-top: 3.6rem;
     }
@@ -612,7 +616,7 @@ body {
     }
 }
 .catalog-grid {
-    padding-bottom: 4.9rem;
+    padding-bottom: 6.2rem;
 }
 .category {
     display: flex;
@@ -701,11 +705,11 @@ body {
     background-size: cover;
     background-position-x: center;
     background-repeat: no-repeat;
-    padding-bottom: 20.4rem;
+    padding-bottom: 19.3rem;
     &__box {
         display: flex;
         gap: 12%;
-        margin-top: 6.7rem;
+        margin-top: 7.5rem;
         margin-left: 12rem;
 
     }
@@ -713,8 +717,7 @@ body {
         max-width: 567px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        gap: 3.5rem;
+        gap: 2.6rem;
         flex-basis: 44%;
     }
     &__link {
@@ -737,7 +740,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 3.5rem;
+        gap: 3.6rem;
         flex-basis: 37%;
     }
     &__span {
@@ -746,7 +749,7 @@ body {
     &__list {
         display: flex;
         align-items: center;
-        gap: 4rem;
+        gap: 3.2rem;
         list-style-type: none;
         padding-left: 0;
     }
@@ -779,18 +782,20 @@ body {
         height: 24px;
     }
 }
+.contact {
+    padding-bottom: 15.7rem;
+}
 .contact-box {
-    padding-bottom: 24.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     &__text {
-        margin-top: 5.4rem;
-        padding-left: 11.4rem;
+        margin-top: 6.2rem;
+        padding-left: 12rem;
         max-width: 38rem;
         display: flex;
         flex-direction: column;
-        gap: 6rem;
+        gap: 4.1rem;
     }
     &__list {
         display: flex;
@@ -836,7 +841,7 @@ body {
 .card {
     border: 2px solid rgba($green, .4);
     border-radius: 2rem;
-    padding: 3.2rem 5.8rem 4rem;
+    padding: 3rem 5.8rem 4rem;
     &__title {
         font-size: 3rem;
         font-family: $font-cormorant;
@@ -846,7 +851,7 @@ body {
     &__label {
         display: block;
         font-size: 1.2rem;
-        margin-bottom: 1rem;
+        margin-bottom: .9rem;
         margin-left: .6rem;
     }
     &__input {
@@ -854,7 +859,7 @@ body {
         border: 1px solid rgba($green, .4);
         border-radius: 2rem;
         padding: 2.2rem 3rem;
-        margin-bottom: 2.8rem;
+        margin-bottom: 3.1rem;
         width: 100%;
         box-sizing: border-box;
         &:focus {
@@ -874,7 +879,7 @@ body {
         margin-bottom: 0;
     }
     &__link {
-        margin-top: 1.2rem;
+        margin-top: .8rem;
     }
     &__docs {
         color: rgba($green, .6);
@@ -898,7 +903,7 @@ body {
         margin: 0;
         display: flex;
         flex-direction: column;
-        gap: 2.4rem;
+        gap: 2.6rem;
     }
     &__link {
         color: $green;
@@ -912,13 +917,13 @@ body {
         text-decoration: none;
         color: $green;
         font-size: 2.7rem;
-        margin-bottom: 3rem;
+        margin-bottom: 3.5rem;
     }
     &__text {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 6rem;
+        margin-top: 4rem;
         color: rgba($green, .6);
     }
     &__author {
@@ -929,19 +934,23 @@ body {
         }
     }
 }
+footer {
+    border-top: 1px solid #d4d6cf;
+    padding-top: 7.9rem;
+    padding-bottom: 7rem;
+}
 .footer-social {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 2.8rem;
+    gap: 3.3rem;
     list-style-type: none;
     padding-left: 0;
-    margin-top: 3rem;
+    margin-top: 3.1rem;
     margin-bottom: 0;
     &__link {
         display: block;
-        width: 5rem;
-        height: 5rem;
+        width: 4.6rem;
+        height: 4.6rem;
         background-repeat: no-repeat;
         background-position: center center;
         border: 1px solid $green;
