@@ -2,6 +2,7 @@
 
 $green: #27300f;
 $orange: #d26a22;
+$dark-orange: #bf601f;
 $white: #fff;
 
 $font-cormorant: 'Cormorant', serif;
@@ -15,6 +16,10 @@ body {
     font-family: $font-jost;
     color: $green;
     overflow-x: hidden;
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
 }
 
 .header {
@@ -34,6 +39,7 @@ body {
     &__link {
         color: $green;
         text-decoration: none;
+        transition: .3s;
         &:hover {
             color: $orange;
         }
@@ -42,6 +48,7 @@ body {
         color: $green;
         font-weight: 500;
         text-decoration: none;
+        transition: .3s;
         &:hover {
             color: $orange;
         }
@@ -58,6 +65,7 @@ body {
         height: 4rem;
         border: 1px solid $orange;
         position: relative;
+        transition: .3s;
         &:hover {
             background-color: $green;
             border: 1px solid $green;
@@ -79,8 +87,9 @@ body {
     width: 12rem;
     height: 3.2rem;
     &_footer {
-        width: 17.9rem;
-        height: 4.9rem;
+        flex-basis: 18rem;
+        height: 4.8rem;
+        margin-top: .8rem;
     }
 }
 .container {
@@ -91,10 +100,6 @@ body {
 }
 .main {
     position: relative;
-    background-image: url(../images/main.png);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
     padding-bottom: 18rem;
     z-index: 0;
     &__item {
@@ -148,12 +153,12 @@ body {
         color: $green;
         text-align: left;
         line-height: 2.2rem;
+        cursor: pointer;
+        transition: .3s;
         &:hover {
-            .main__btn {
-                &::before {
-                    background-color: $orange;
-                    box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
-                }
+            &::before {
+                background-color: $orange;
+                box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
             }
         }
         &::before {
@@ -281,8 +286,9 @@ body {
     display: inline-block;
     border: none;
     cursor: pointer;
+    transition: .3s;
     &:hover {
-        background-color: #bf601f;
+        background-color: $dark-orange;
     }
     &_max {
         font-size: 1.6rem;
@@ -296,10 +302,6 @@ body {
     }    
 }
 .offer {
-    background-image: url(../images/offer.png);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
     padding-top: 2.8rem;
     padding-bottom: 16.6rem;
     &__text {
@@ -330,10 +332,12 @@ body {
     }
     &-button-next {
         right: -8px;
+        transition: .3s;
     }
     &-button-prev {
         left: initial;
         right: 72px;
+        transition: .3s;
     }
     &-slide {
         border: 1px solid rgba($green, .4);
@@ -349,7 +353,8 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding: 3rem 3.9rem; 
+            padding: 3rem 3.9rem;
+            transition: .3s;
             &:hover {
                 .swiper-slide__hover {
                     height: 233px;
@@ -426,6 +431,7 @@ body {
             align-items: center;
             gap: 2rem;
             opacity: .8;
+            transition: .3s;
             &:hover {
                 opacity: 1;
             }
@@ -500,10 +506,6 @@ body {
     }
 }
 .about {
-    background-image: url(../images/about.png);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
     padding-bottom: 19.5rem;
     &__box {
         display: flex;
@@ -565,20 +567,12 @@ body {
     }
 }
 .trends {
-    background-image: url(../images/trends.png);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
     padding-bottom: 19.1rem;
     &__text {
         padding-top: 3.9rem;
     }
 }
 .catalog {
-    background-image: url(../images/catalog.png);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
     padding-bottom: 14rem;
     &__text {
         padding-top: 3.6rem;
@@ -601,6 +595,7 @@ body {
         align-items: center;
         gap: 1.3rem;
         opacity: .8;
+        transition: .3s;
         &:hover {
             opacity: 1;
         }
@@ -636,6 +631,7 @@ body {
         padding: 2.4rem 0;
         border-radius: 4rem;
         display: block;
+        transition: .3s;
         &:hover {
             border: 1px solid $orange;
             color: $orange;
@@ -652,6 +648,7 @@ body {
         box-sizing: border-box;
         padding: 2.7rem 3rem 3.8rem;
         border-radius: 2rem;
+        transition: .3s;
         &:hover {
             box-shadow: 0 0 0 2px rgba($green, .4) inset;
         }
@@ -701,10 +698,6 @@ body {
     }
 }
 .delivery {
-    background-image: url(../images/delivery.png);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
     padding-bottom: 19.3rem;
     &__box {
         display: flex;
@@ -756,8 +749,11 @@ body {
     &__item {
         cursor: pointer;
         opacity: .4;
+        transform: scale(1);
+        transition: .3s;
         &:hover {
             opacity: 1;
+            transform: scale(1.05);
         }
     }
     &__item:nth-child(1) {
@@ -809,6 +805,10 @@ body {
         text-decoration: none;
         font-size: 2.4rem;
         font-weight: 500;
+        transition: .3s;
+        &:hover {
+            color: $orange;
+        }
     }
     &__list-item {
         display: flex;
@@ -862,6 +862,7 @@ body {
         margin-bottom: 3.1rem;
         width: 100%;
         box-sizing: border-box;
+        transition: .3s;
         &:focus {
             border: 1px solid rgba($green, 1);
             outline: none;
@@ -888,13 +889,14 @@ body {
     }
 }
 .footer {
-    background-image: url(../images/footer.png);
-    background-size: cover;
-    background-position-x: center;
-    background-repeat: no-repeat;
     &__box {
         display: flex;
         justify-content: space-between;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        flex-basis: 66.5%;
     }
     &__list {
         font-size: 1.8rem;
@@ -908,6 +910,7 @@ body {
     &__link {
         color: $green;
         text-decoration: none;
+        transition: .3s;
         &:hover {
             color: $orange;
         }
@@ -929,6 +932,7 @@ body {
     &__author {
         color: rgba($green, .6);
         text-decoration: none;
+        transition: .3s;
         &:hover {
             color: rgba($green, 1);
         }
@@ -956,6 +960,7 @@ footer {
         border: 1px solid $green;
         border-radius: 100%;
         opacity: .8;
+        transition: .3s;
         &:hover {
             opacity: 1;
         }
