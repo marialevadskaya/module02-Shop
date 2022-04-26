@@ -152,7 +152,7 @@ body {
     &__image {
         width: 92%;
         border-radius: 100%;
-        animation: shadow 4s linear infinite ;
+        animation: shadow 4s linear infinite;
     }
     &__text {
         padding-top: 4rem;
@@ -269,7 +269,6 @@ body {
     margin: 0;
     &__span {
         font-style: italic;
-        animation: opacity 4s linear infinite;
     }
     &_block {
         .title__span {
@@ -1003,21 +1002,5 @@ footer {
         box-shadow: 0 0 0 0 rgba($green, .5);
     }
 }
-@keyframes opacity {
-    0% {
-        opacity: 0.5;
-    }
-    25% {
-        opacity: 0.7;
-    }
-    50% {
-        opacity: 1;
-    }
-    75% {
-        opacity: 0.7;
-    }
-    100% {
-        opacity: 0.5;
-    }
-}
+
   
