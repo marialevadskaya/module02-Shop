@@ -8,6 +8,22 @@ $white: #fff;
 $font-cormorant: 'Cormorant', serif;
 $font-jost:'Jost', sans-serif;
 
+$r_minmob: 320px;
+$r_mob_360: 360px;
+$r_mob_400: 400px;
+$r_mob_500: 500px;
+$r_mob_600: 600px;
+$r_tab: 768px;
+$r_tab_860: 860px;
+$r_tab_900: 900px;
+$r_desk: 1000px;
+$r_desk_1120: 1120px;
+$r_desk_hd: 1200px;
+$r_desk_1280: 1280px;
+$r_desk_1350: 1350px;
+$r_desk_1460: 1460px;
+$r_desk_full_1750: 1750px;
+
 html {
     font-size: 10px;
 }
@@ -18,7 +34,6 @@ body {
     overflow-x: hidden;
     background-image: url(../images/bg.png);
     background-size: cover;
-    background-position-x: center;
     background-repeat: no-repeat;
 }
 
@@ -29,10 +44,19 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 8rem;
+    gap: 5%;
+    @media (max-width: $r_desk_1280) {
+        gap: 3%;
+    }
     &__navigation {
         flex-grow: 1;
-        margin-left: 4rem;
+        margin-left: 4.5rem;
+        @media (max-width: $r_desk_1460) {
+            margin-left: 0;
+        }
+        @media (max-width: $r_desk_hd) {
+            flex-grow: 0;
+        }
     }
     &__nav {
         display: flex;
@@ -40,6 +64,15 @@ body {
         margin: 0;
         padding-left: 0;
         gap: 7rem;
+        @media (max-width: $r_desk_1460) {
+            gap: 4.8rem;
+        }
+        @media (max-width: $r_desk_hd) {
+            gap: 2.5rem;
+        }
+        @media (max-width: $r_tab_900) {
+            display: none;
+        }
     }
     &__link {
         color: $green;
@@ -57,6 +90,9 @@ body {
         text-align: right;
         text-decoration: none;
         transition: .3s;
+        @media (max-width: $r_desk_hd) {
+            display: none;
+        }
         &:hover {
             color: $orange;
         }
@@ -69,14 +105,25 @@ body {
         background-position: center center;
         background-color: $orange;
         border-radius: 100%;
-        flex-basis: 4rem;
+        width: 4rem;
         height: 4rem;
         border: 1px solid $orange;
         position: relative;
         transition: .3s;
+        cursor: pointer;
+        @media (max-width: $r_desk_hd) {
+            background-image: url(../images/cart-mobi.svg);
+            background-color: $white;
+            border: 1px solid $green;
+            opacity: .8;
+        }
         &:hover {
             background-color: $green;
             border: 1px solid $green;
+            @media (max-width: $r_desk_hd) {
+                background-color: $white;
+                opacity: 1;
+            }
         }
     }
     &__counter {
@@ -85,6 +132,58 @@ body {
         position: absolute;
         right: .5rem;
         top: 0.5rem;
+        @media (max-width: $r_desk_hd) {
+            color: $green;
+        }
+    }
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    &__phone, &__menu {
+        display: none;
+    }
+    &__menu {
+        @media (max-width: $r_tab_900) {
+            display: block;
+            background-image: url(../images/menu.svg);
+            background-repeat: no-repeat;
+            background-size: 1.7rem 1.5rem;
+            background-position: center center;
+            background-color: $white;
+            border-radius: 100%;
+            width: 4rem;
+            height: 4rem;
+            border: 1px solid $green;
+            position: relative;
+            opacity: .8;
+            cursor: pointer;
+            transition: .3s;
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__phone {
+        @media (max-width: $r_desk_hd) {
+            display: block;
+            background-image: url(../images/tel.svg);
+            background-repeat: no-repeat;
+            background-size: 1.7rem 1.5rem;
+            background-position: center center;
+            background-color: $white;
+            border-radius: 100%;
+            width: 4rem;
+            height: 4rem;
+            border: 1px solid $green;
+            position: relative;
+            opacity: .8;
+            transition: .3s;
+        }
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 .logo {
@@ -109,6 +208,9 @@ body {
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+    @media (max-width: $r_tab) {
+        max-width: 600px;
+    }
 }
 .main {
     position: relative;
@@ -118,15 +220,33 @@ body {
         margin-left: 12rem;
         max-width: 37.8rem;
         margin-top: 6.2rem;
+        @media (max-width: $r_desk_1280) {
+            margin-left: 8rem;
+        }
+        @media (max-width: $r_desk_1120) {
+            margin-left: 4rem;
+        }
+        @media (max-width: $r_tab) {
+            max-width: 100%;
+            margin-left: 0;
+            margin-top: 3rem;
+        }
     }
     &__link {
         margin-top: 5.3rem;
+        @media (max-width: $r_tab) {
+            text-align: center;
+        }
     }
     &__flex {
         display: flex;
         justify-content: space-between;
         gap: 30px;
         align-items: center;
+        @media (max-width: $r_desk_1120) {
+            padding-top: 3rem;
+            padding-bottom: 9rem;
+        }
     }
     &__cover {
         flex-basis: 758px;
@@ -138,6 +258,22 @@ body {
         justify-content: center;
         align-items: center;
         position: relative;
+        @media (max-width: $r_desk_1350) {
+            flex-basis: 650px;
+            height: 650px;
+        }
+        @media (max-width: $r_desk_hd) {
+            flex-basis: 600px;
+            height: 600px;
+        }
+        @media (max-width: $r_desk_1120) {
+            border: 1px solid transparent;
+            height: auto;
+            flex-basis: calc(100% - 395px);
+        }
+        @media (max-width: $r_tab) {
+            display: none;
+        }
     }
     &__line {
         width: 656px;
@@ -148,14 +284,41 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        @media (max-width: $r_desk_1350) {
+            width: 600px;
+            height: 600px;
+        }
+        @media (max-width: $r_desk_hd) {
+            border: 1px solid transparent;
+            width: auto;
+            height: auto;
+        }
     }
     &__image {
         width: 92%;
         border-radius: 100%;
         animation: shadow 4s linear infinite;
     }
+    &__imagemobi {
+        display: none;
+        @media (max-width: $r_tab) {
+            display: block;
+            max-width: 300px;
+            margin: 0 auto;
+            margin-top: 3rem;
+            border-radius: 100%;
+            animation: shadow 4s linear infinite;
+        }
+    }
     &__text {
         padding-top: 4rem;
+        @media (max-width: $r_desk_1120) {
+            flex-basis: 395px;
+        }
+        @media (max-width: $r_tab) {
+            flex-basis: 100%;
+            padding-top: 0;
+        }
     }
     &__btn {
         border: none;
@@ -185,6 +348,16 @@ body {
         &_1 {
             top: 45px;
             left: 64px;
+            @media (max-width: $r_desk_1350) {
+                top: 19px;
+            }
+            @media (max-width: $r_desk_hd) {
+                top: 39px;
+                left: 24px;
+            }
+            @media (max-width: $r_desk_1120) {
+                display: none;
+            }
             &::before {
                 right: -35px;
                 bottom: 10px;
@@ -193,6 +366,16 @@ body {
         &_2 {
             top: 194px;
             right: 2px;
+            @media (max-width: $r_desk_1350) {
+                top: 109px;
+            }
+            @media (max-width: $r_desk_hd) {
+                top: 70px;
+                right: -12px;
+            }
+            @media (max-width: $r_desk_1120) {
+                display: none;
+            }
             &::before {
                 top: 17px;
                 left: -26px;
@@ -201,6 +384,15 @@ body {
         &_3 {
             bottom: -50px;
             right: 244px;
+            @media (max-width: $r_desk_1350) {
+                bottom: -59px;
+            }
+            @media (max-width: $r_desk_hd) {
+                bottom: -62px;
+            }
+            @media (max-width: $r_desk_1120) {
+                display: none;
+            }
             &::before {
                 top: -24px;
                 left: 13px;
@@ -217,6 +409,16 @@ body {
         bottom: 109px;
         right: 113px;
         z-index: -1;
+        @media (max-width: $r_desk_full_1750) {
+            width: 10rem;
+            bottom: 140px;
+            right: -23px; 
+        }
+        @media (max-width: $r_tab) {
+            left: -24px;
+            top: 106px;
+            width: 8rem;
+        }
     }
     &__avocado {
         position: absolute;
@@ -224,6 +426,11 @@ body {
         top: 47px;
         right: -8px;
         z-index: -1;
+        @media (max-width: $r_desk_full_1750) {
+            width: 9.8rem;
+            top: 120px;
+            right: -50px;
+        }
     }
     &__cucumber {
         position: absolute;
@@ -231,6 +438,12 @@ body {
         top: 0;
         right: 1135px;
         z-index: -1;
+        @media (max-width: $r_tab) {
+            top: auto;
+            bottom: 200px;
+            right: -25px;
+            transform: rotate(90deg);
+        }
     }
     &__pepper {
         position: absolute;
@@ -238,25 +451,28 @@ body {
         top: 400px;
         left: 29px;
         z-index: -1;
+        @media (max-width: $r_desk_full_1750) {
+            display: none;
+        }
     }
     &__bean-1 {
         position: absolute;
         width: 6.6rem;
-        top: 864px;
+        bottom: 154px;
         left: 31px;
         z-index: -1;
     }
     &__bean-2 {
         position: absolute;
         width: 4.7rem;
-        top: 798px;
+        bottom: 230px;
         left: 9px;
         z-index: -1;
     }
     &__bean-3 {
         position: absolute;
         width: 3.6rem;
-        top: 811px;
+        bottom: 197px;
         left: -9px;
         z-index: -1;
     }
@@ -267,6 +483,15 @@ body {
     font-size: 8rem;
     line-height: 1;
     margin: 0;
+    @media (max-width: $r_desk_1280) {
+        font-size: 7rem;
+    }
+    @media (max-width: $r_desk_1120) {
+        font-size: 6rem;
+    }
+    @media (max-width: $r_tab) {
+        text-align: center;
+    }
     &__span {
         font-style: italic;
     }
@@ -279,11 +504,20 @@ body {
 .description {
     margin: 0;
     line-height: 1.5;
+    @media (max-width: $r_tab) {
+        text-align: center;
+    }
     &_size-s {
         font-size: 1.8rem;
+        @media (max-width: $r_desk_1280) {
+            font-size: 1.6rem;
+        }
     }
     &_size-m {
         font-size: 2.4rem;
+        @media (max-width: $r_desk_1280) {
+            font-size: 2.2rem;
+        }
     }
 }
 .link {
@@ -299,6 +533,9 @@ body {
     border: none;
     cursor: pointer;
     transition: .3s;
+    @media (max-width: $r_desk_1280) {
+        font-size: 1.4rem;
+    }
     &:hover {
         background-color: $dark-orange;
         transform: scale(1.05);
@@ -307,6 +544,16 @@ body {
         font-size: 1.6rem;
         padding: 2.1rem 4.9rem;
         box-shadow: 0px 1rem 1.1rem .17rem rgba(207, 92, 13, 0.15);
+        @media (max-width: $r_desk_1460) {
+            padding: 2.1rem 4rem;
+        }
+        @media (max-width: $r_desk_1350) {
+            padding: 2.1rem 3.5rem;
+        }
+        @media (max-width: $r_desk_hd) {
+            margin: 0 auto;
+            padding: 2.1rem 4.9rem;
+        }
     }
     &_min {
         font-size: 1.4rem;
@@ -325,14 +572,26 @@ body {
 .slider{
     overflow: hidden;
     padding-top: 9.6rem;
+    @media (max-width: $r_tab) {
+        max-width: 450px;
+        margin: 0 auto;
+        padding-top: 5.4rem;
+        padding-bottom: 6rem;
+    }
 }
 .swiper {
     overflow: initial;
     &-pagination {
         display: none;
+        @media (max-width: $r_tab) {
+            display: block;
+        }
     }
     &-button-next, &-button-prev {
         top: -60px;
+        @media (max-width: $r_tab) {
+            display: none;
+        }
         &:hover {
             &::after {
                 color: rgba($green, 1);
@@ -353,6 +612,7 @@ body {
         transition: .3s;
     }
     &-slide {
+        height: 670px;
         border: 1px solid rgba($green, .4);
         border-radius: 2rem;
         padding: 3rem 3.7rem 3.8rem; 
@@ -361,13 +621,20 @@ body {
         background-size: cover;
         position: relative;
         z-index: 0;
+        @media (max-width: $r_desk_1280) {
+            padding: 3rem 2rem 3.8rem;
+        }
         &_white {
             height: 520px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
+            background-size: contain;
             padding: 3rem 3.9rem;
             transition: .3s;
+            @media (max-width: $r_desk_hd) {
+                height: 400px;
+            }
             &:hover {
                 .swiper-slide__hover {
                     height: 233px;
@@ -394,6 +661,10 @@ body {
             font-size: 3rem;
             color: $green;
             margin-bottom: 0;
+            @media (max-width: $r_desk_hd) {
+                text-align: center;
+                font-size: 2.5rem;
+            }
         }
         &__text {
             color: rgba($green, .7);
@@ -401,16 +672,32 @@ body {
             max-width: 270px;
             margin-top: 2.5rem;
             margin-bottom: 3.4rem;
+            @media (max-width: $r_desk_1120) {
+                margin-bottom: 2.4rem;
+            }
+            @media (max-width: $r_desk_hd) {
+                text-align: center;
+            }
         }
         &__description {
             max-width: 25rem;
             margin-top: 25px;
             min-height: 54px;
             line-height: 1.5;
+            @media (max-width: $r_desk_hd) {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
         &__price {
             font-size: 2.4rem;
             margin-bottom: 3.4rem;
+            @media (max-width: $r_desk_hd) {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
         &__hover {
             height: 0;
@@ -478,8 +765,25 @@ body {
         }
     } 
 }
+.swiper-horizontal>.swiper-pagination-bullets {
+    bottom: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-pagination-bullet-active {
+    background: $orange;
+    border: 1px solid $orange;
+}
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+}
 .counter {
     display: flex;
+    @media (max-width: $r_desk_hd) {
+        display: none;
+    }
     &__btn {
         cursor: pointer;
         width: 50px;
@@ -516,6 +820,9 @@ body {
         &_min {
             width: 33px;
         }
+        @media (max-width: $r_desk_1350) {
+            width: 38px;
+        }
     }
 }
 .about {
@@ -525,10 +832,32 @@ body {
         justify-content: space-between;
         align-items: center;
         margin-top: 6.7rem;
+        @media (max-width: $r_desk) {
+            gap: 2rem;
+        }
+        @media (max-width: $r_tab_860) {
+            display: block;
+        }
     }
     &__text {
         margin-left: 11.4rem;
         max-width: 620px;
+        @media (max-width: $r_desk_1280) {
+            margin-left: 8rem;
+            max-width: 538px;
+        }
+        @media (max-width: $r_desk_1120) {
+            margin-left: 4rem;
+        }
+        @media (max-width: $r_tab_900) {
+            max-width: 450px;
+        }
+        @media (max-width: $r_tab_860) {
+            max-width: 620px;
+        }
+        @media (max-width: $r_tab) {
+            margin-left: 0; 
+        }
     }
     &__list {
         display: flex;
@@ -543,6 +872,21 @@ body {
         font-style: italic;
         color: $green;
         font-size: 3rem;
+        @media (max-width: $r_desk_hd) {
+            gap: 6.9rem;
+        }
+        @media (max-width: $r_desk_1120) {
+            gap: 4.9rem;
+        }
+        @media (max-width: $r_desk) {
+            gap: 2.9rem;
+            font-size: 2.6rem;
+        }
+        @media (max-width: $r_tab_860) {
+            margin-top: 4rem;
+            justify-content: center;
+            gap: 8.9rem;
+        }
     }
     &__item {
         display: flex;
@@ -717,6 +1061,12 @@ body {
         gap: 12%;
         margin-top: 7.5rem;
         margin-left: 12rem;
+        @media (max-width: $r_desk_1280) {
+            margin-left: 8rem;
+        }
+        @media (max-width: $r_desk_1120) {
+            margin-left: 4rem;
+        }
     }
     &__left {
         max-width: 567px;
@@ -804,6 +1154,12 @@ body {
         display: flex;
         flex-direction: column;
         gap: 4.1rem;
+        @media (max-width: $r_desk_1280) {
+            padding-left: 8rem;
+        }
+        @media (max-width: $r_desk_1120) {
+            padding-left: 4rem;
+        }
     }
     &__list {
         display: flex;
@@ -996,7 +1352,7 @@ footer {
         box-shadow: 0 0 0 0 rgba($green, .5);
     }
     50% {
-        box-shadow: 2rem 2rem 3rem 0 rgba($green, 0.5);
+        box-shadow: 1rem 1rem 3rem 0 rgba($green, 0.5);
     }
     100% {
         box-shadow: 0 0 0 0 rgba($green, .5);
