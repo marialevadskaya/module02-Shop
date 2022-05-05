@@ -74,3 +74,12 @@ var swiper = new Swiper(".offerSwiper", {
       },
     }
   });
+
+   var swiper = new Swiper(".categorySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
